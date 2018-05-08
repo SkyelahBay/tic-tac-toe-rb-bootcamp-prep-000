@@ -83,6 +83,9 @@ def won?(board)
   return false #if no combination was returned that means there was no winner so return false.
 end #end won?
 
+def full?(board) 
+  board.any?{|space| space == " "} ? false : true 
+end
 
 def draw?(board)
   if !won?(board) && full?(board) #if full & no winner
@@ -94,9 +97,6 @@ def draw?(board)
   end
 end
 
-def full?(board) 
-  board.any?{|space| space == " "} ? false : true 
-end
 
 def over?(board)
   if draw?(board) || won?(board) || full?(board) #if there is a draw, win, or full board
