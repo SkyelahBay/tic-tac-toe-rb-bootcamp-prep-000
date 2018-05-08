@@ -36,17 +36,13 @@ end
 
 def turn(board)
   request_num = "Please enter 1-9:"
-  valid_response = false
-  while valid_response == false do
-    puts request_num
-    input = gets.strip
-    index = input_to_index(input)
-    if !position_taken?(board, index)
-      valid_response = true
-      move(board, index, current_player(board))
-    else
-      valid_response = false
-    end
+  puts request_num
+  input = gets.strip
+  index = input_to_index(input)
+  if !position_taken?(board, index)
+    move(board, index, current_player(board))
+  else
+    turn(board)
   end
 end
 
