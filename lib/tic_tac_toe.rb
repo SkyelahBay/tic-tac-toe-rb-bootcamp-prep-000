@@ -29,7 +29,7 @@ def turn(board)
   puts request_num
   input = gets.strip
   index = input_to_index(input)
-  if !position_taken?(board, index)
+  if valid_move?(board, index)
     move(board, index, current_player(board))
   else
     turn(board)
