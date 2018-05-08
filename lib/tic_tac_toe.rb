@@ -84,7 +84,7 @@ def won?(board)
 end #end won?
 
 def full?(board) 
-  board.any?{|space| space == " "} ? false : true 
+  board.any?{|space| space == " " || space == nil} ? false : true 
 end
 
 def draw?(board)
