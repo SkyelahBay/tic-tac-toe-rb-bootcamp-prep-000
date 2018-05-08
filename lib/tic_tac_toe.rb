@@ -54,7 +54,7 @@ def current_player(board)
 end
 
 def play(board)
-  until over?(board) #if false keep taking turns
+  until over?(board) #until over? returns true, keep taking turns
     turn(board)
   end
 
