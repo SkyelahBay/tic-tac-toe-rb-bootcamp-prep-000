@@ -55,8 +55,6 @@ end
 
 def play(board)
   turn(board)
-  
- 
 end
 
 def won?(board)
@@ -93,10 +91,9 @@ def full?(board)
 end
 
 def over?(board)
-  if draw?(board) #if there is a draw
-    print "Cat's Game!"
+  if draw?(board) #if there is a draw, that means the board is full.
     return true
-  elsif (won?(board) && !full?(board)) || (won?(board) && full?(board)) #if the game is won on a full or not full board
+  elsif won?(board) #if the game is won it must be over.
     return true
   else
     return false
