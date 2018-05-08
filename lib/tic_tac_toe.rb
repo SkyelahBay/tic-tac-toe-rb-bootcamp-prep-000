@@ -106,11 +106,12 @@ def draw?(board)
     return true
   elsif (!won?(board) && !full?(board)) || won?(board) #else
     return false
+  elsif full?(board)
   end
 end
 
 def full?(board) 
-  board.any?{|space| space == " "} ? false : true       #if any spaces are blank, return false.
+  board.any?{|space| space == " "} ? false : true 
 end
 
 def over?(board)
