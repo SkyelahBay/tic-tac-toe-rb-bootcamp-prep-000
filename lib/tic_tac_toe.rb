@@ -16,22 +16,12 @@ def move(board, pos, player)
 end
 
 def position_taken?(board, index)
-  if valid_move?(board, index) #if true, then index is not taken.
-    return false
-  else
-    return true
-  end
+  !(board[index].nil? || board[index] == " ")
 end
 
+
 def valid_move?(board, index)
-  if !index.between?(0,8) || 
-     board[index] == nil || 
-     board[index] == "X" || 
-     board[index] == "O"
-    return false #if no input
-  else
-    return true
-  end
+  !index.between?(0,8) || position_taken?(board, index) ? false : true
 end
 
 def turn(board)
