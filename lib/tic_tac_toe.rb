@@ -77,6 +77,7 @@ def won?(board)
   return false #if no combination was returned that means there was no winner so return false.
 end #end won?
 
+
 def draw?(board)
   if !won?(board) && full?(board) #if full & no winner
     return true
