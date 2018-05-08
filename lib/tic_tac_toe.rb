@@ -60,9 +60,9 @@ def play(board)
 
   if won?(board) #if true, check for a winner
     if winner == "X"
-      puts "Congratulations X!"
+      return "Congratulations X!"
     elsif winner = "O"
-      puts "Congratulations O!"
+      return "Congratulations O!"
     end
   elsif draw?(board)
     puts "Cat's Game!"
