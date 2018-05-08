@@ -60,10 +60,6 @@ def play(board)
 end
 
 def won?(board)
-  if board.all? {|space| space == " "}
-    return false
-  end
-
   WIN_COMBINATIONS.each do |combination| #for each combination
     win_index_1 = combination[0]
     win_index_2 = combination[1] 
