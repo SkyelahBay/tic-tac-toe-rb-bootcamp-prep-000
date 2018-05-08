@@ -81,15 +81,15 @@ end #end won?
 def draw?(board)
   if !won?(board) && full?(board) #if full & no winner
     return true
-  elsif (!won?(board) && !full?(board)) || won?(board) #else
+  elsif !won?(board) && !full?(board) #else if not full & no winner
     return false
-  else
-    return full?(board)
+  elsif won?(board) #else if a winner
+    return false
   end
 end
 
 def full?(board) 
-  board.any?{|space| space == " "} ? false : true 
+  return board.any?{|space| space == " "} ? false : true 
 end
 
 def over?(board)
