@@ -54,7 +54,9 @@ def current_player(board)
 end
 
 def play(board)
-  turn(board)
+  if !over?(board)
+    turn(board)
+  elsif
 end
 
 def won?(board)
