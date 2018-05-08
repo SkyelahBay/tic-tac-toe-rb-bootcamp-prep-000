@@ -110,9 +110,9 @@ def winner(board)
   combination = won?(board) #if there is a winner it will return the combination
   if !over?(board) #if there is no draw or no winner the game is not over yet
     return nil 
-  elsif board[combination[0]] == "X" #if the first winning index of board is "X" 
+  elsif board[combination[0]] == "X" 
     return "X"
-  else # otherwise, the game must be over, not a draw, & the winning player isn't "X" so it must be "O"
+  elsif board[combination[0]] == "O" 
     return "O"
   end
 end
