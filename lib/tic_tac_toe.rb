@@ -91,9 +91,7 @@ def full?(board)
 end
 
 def over?(board)
-  if draw?(board) #if there is a draw, that means the board is full.
-    return true
-  elsif won?(board) #if the game is won it must be over.
+  if draw?(board) || won?(board) || full?(board) #if there is a draw, win, or full board
     return true
   else
     return false
