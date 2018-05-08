@@ -66,19 +66,8 @@ end
 
 def play(board)
   turn(board)
-  if over?(board) #if game is over
-    if won?(board) #if there is a winner
-      if winner(board) == "X" #if the winner is X
-        puts "Congratulations X!"
-      elsif winner(board) == "O" #else if O
-        puts "Congratulations O!"
-      end
-    elsif draw?(board) #else if game is over but no winner
-      print "Cat's Game!"
-    end
-  else
-    turn(board)
-  end
+  
+ 
 end
 
 # Define your WIN_COMBINATIONS constant
