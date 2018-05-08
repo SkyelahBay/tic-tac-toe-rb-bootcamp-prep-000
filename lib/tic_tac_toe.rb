@@ -56,7 +56,8 @@ end
 def play(board)
   if !over?(board) #if false keep taking turns
     turn(board)
-  elsif over?(board)
+  end
+  if over?(board)
     if won?(board) #if true, check for a winner
       winner(board) == "X" ? "Congratulations X!" : "Congratulations O!" #if there is a winner but it wasn't X.
     elsif draw?(board)
