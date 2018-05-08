@@ -59,7 +59,7 @@ def play(board)
   end
 
   if won?(board) #if over, check for a winner
-    return "Congratulations #{winner(board)}!"
+    puts "Congratulations #{winner(board)}!"
   elsif draw?(board)
     puts "Cat's Game!"
   end
