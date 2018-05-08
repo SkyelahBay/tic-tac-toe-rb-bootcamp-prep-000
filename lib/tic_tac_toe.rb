@@ -89,7 +89,7 @@ def draw?(board)
 end
 
 def full?(board) 
-  return board.any?{|space| space == " "} ? false : true 
+  board.any?{|space| space == " "} ? false : true 
 end
 
 def over?(board)
