@@ -54,16 +54,14 @@ def current_player(board)
 end
 
 def play(board)
-  9.times do
+  if !over?(board) #if false keep taking turns
     turn(board)
-    if over?(board)
-      if won?(board) #if true, check for a winner
-        winner(board) == "X" ? "Congratulations X!" : "Congratulations O!" #if there is a winner but it wasn't X.
-        break
-      elsif draw?(board)
-        puts "Cat's game!"
-        break
-      end
+  end
+  if over?(board)
+    if won?(board) #if true, check for a winner
+      winner(board) == "X" ? "Congratulations X!" : "Congratulations O!" #if there is a winner but it wasn't X.
+    elsif draw?(board)
+      puts "Cat's game!"
     end
   end
 end
